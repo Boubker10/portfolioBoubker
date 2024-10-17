@@ -4,3 +4,4 @@ mediapipe==0.10.15
 imutils==0.5.4
 scipy
 numpy==1.25.2
+setuptools>=65.5.0
