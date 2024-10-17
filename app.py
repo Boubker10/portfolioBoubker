@@ -3,7 +3,6 @@ import cv2
 import imutils
 import numpy as np
 import mediapipe as mp
-from scipy.spatial import distance as dist
 import math
 
 mp_face_mesh = mp.solutions.face_mesh
@@ -23,12 +22,7 @@ labels = ["background", "aeroplane", "bicycle", "bird", "boat", "bottle", "bus",
 colors = np.random.uniform(0, 255, size=(len(labels), 3))
 
 # Define EAR calculation function
-def calculate_ear(eye_landmarks):
-    A = dist.euclidean(eye_landmarks[1], eye_landmarks[5])
-    B = dist.euclidean(eye_landmarks[2], eye_landmarks[4])
-    C = dist.euclidean(eye_landmarks[0], eye_landmarks[3])  
-    ear = (A + B) / (2.0 * C)
-    return ear
+
 
 LEFT_EYE = [33, 160, 158, 133, 153, 144]
 RIGHT_EYE = [362, 385, 387, 263, 373, 380]
@@ -147,16 +141,8 @@ elif page == "Projets Deep Learning":
                     left_eye_points = [(int(point.x * frame.shape[1]), int(point.y * frame.shape[0])) for point in left_eye_landmarks]
                     right_eye_points = [(int(point.x * frame.shape[1]), int(point.y * frame.shape[0])) for point in right_eye_landmarks]
 
-                    left_ear = calculate_ear(left_eye_points)
-                    right_ear = calculate_ear(right_eye_points)
-                    ear = (left_ear + right_ear) / 2.0
 
-                    if ear < 0.19:
-                        cv2.putText(frame, "Drowsiness Detected", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
-                        detected_objects.append("Eyes Closed")
-                    else:
-                        cv2.putText(frame, "Eyes Open", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-                        detected_objects.append("Eyes Open")
+
 
             # Process hand detections
             if result_hands.multi_hand_landmarks:
