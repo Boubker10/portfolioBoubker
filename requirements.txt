@@ -43,3 +43,5 @@ torchvision==0.18.1
 tqdm==4.66.4
 urllib3==1.26.19
 werkzeug==3.0.3
+setuptools>=65.5.0
+
