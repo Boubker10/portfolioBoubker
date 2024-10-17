@@ -37,12 +37,24 @@ elif page == "Projets Machine Learning":
     st.plotly_chart(fig1)
 
 elif page == "Projets Deep Learning":
-    st.title("Projets Deep Learning")
-    st.subheader("Projet 2 : Classification d'images")
+# Project 4: SafeDriveVision
+    st.subheader("Project 4: SafeDriveVision")
     st.write("""
-        Ce projet utilise un réseau de neurones convolutifs (CNN) pour classifier des images.
-        Le modèle est capable de reconnaître des objets tels que des voitures, des animaux, et des personnes dans des images.
+    **Project Description**: SafeDriveVision is a computer vision project aimed at enhancing road safety. 
+    This project leverages deep learning models to detect and alert drivers in real-time about dangerous behaviors, 
+    such as using a phone while driving or showing signs of drowsiness. The primary goal is to reduce road accidents 
+    by warning drivers of their potentially hazardous actions.
+
+    **Features**:
+    - **Phone Use Detection**: Utilizes the **YOLOv5** model to identify drivers using their phones while driving.
+    - **Drowsiness Detection**: Incorporates a custom detector (sharp detector) to monitor signs of driver fatigue.
+    - **Real-Time Alerts**: Implements an alert system that warns the driver when risky behavior is detected.
+
+    For more details on this project, check out the Medium article: [SafeDriveVision: Enhancing Road Safety through Computer Vision](https://medium.com).
+
+    **See the project on GitHub**: [SafeDriveVision on GitHub](https://github.com/Boubker10/SafeDriveVision)
     """)
+
     #st.image("assets/projet2_image.png", caption="Exemple de classification d'image")
 
 elif page == "Forecasting Time Series":
