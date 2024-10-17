@@ -1,8 +1,19 @@
-streamlit==1.24.0
-opencv-python-headless==4.8.0.76
-mediapipe==0.10.15
-imutils==0.5.4
-scipy
-numpy==1.25.2
-setuptools>=65.5.0
-distlib
+torch
+torchvision
+matplotlib
+imageio
+imageio-ffmpeg
+pyyaml # yaml
+tqdm
+argparse
+cython
+scikit-image # skimage
+onnxruntime
+gradio
+imutils==0.5.3
+opencv-contrib-python==4.8.1.78
+opencv-python>=4.8.1.78
+dlib==19.20.0
+numpy==1.22.0
+cmake==3.18.0
+scipy==1.5.1
