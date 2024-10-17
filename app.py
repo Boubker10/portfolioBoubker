@@ -8,11 +8,17 @@ page = st.sidebar.selectbox("Choisissez une page", ["À propos de moi", "Projets
 if page == "À propos de moi":
     st.title("À propos de moi")
     st.write("""
-        Je suis un passionné de Data Science et d'Intelligence Artificielle avec plusieurs projets dans le domaine. 
-        Sur ce site, vous trouverez une collection de mes travaux, allant de projets de Machine Learning à des modèles 
-        avancés de Deep Learning et des prévisions de séries temporelles.
+        Bonjour, je suis **Boubker Bennani**, passionné par la Data Science et l'Intelligence Artificielle.
+        J'ai travaillé sur plusieurs projets liés au Machine Learning, Deep Learning et à la prévision de séries temporelles.
+        Mon objectif est de résoudre des problèmes complexes à l'aide des données et d'explorer les dernières avancées dans ces domaines.
+        Voici une collection de mes travaux, incluant des modèles d'apprentissage supervisé, des réseaux de neurones profonds et des approches prédictives.
     """)
-    #st.image("assets/mon_image.png", caption="Ceci est une image de moi")
+
+    st.write("""
+        Vous pouvez consulter mon **CV** ici : 
+        [Télécharger mon CV](assets/mon_cv.pdf)
+    """)
+
 
 elif page == "Projets Machine Learning":
     st.title("Projets Machine Learning")
