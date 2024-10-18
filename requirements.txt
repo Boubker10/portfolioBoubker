@@ -1,6 +1,6 @@
 streamlit==1.14.0
-opencv-python-headless==4.5.5.64  # No GUI support, reduces size
-mediapipe==0.8.9.1
+opencv-python-headless==4.5.5.64  # To save space, no GUI
+mediapipe>=0.10.13  # Use latest compatible version
 pyautogui==0.9.53
 easyocr==1.4
 numpy==1.21.2
