@@ -1,6 +1,6 @@
-streamlit>=1.25.0  # Using a newer version of Streamlit
+streamlit
 opencv-python-headless==4.5.5.64
-mediapipe>=0.10.13
+mediapipe
 pyautogui==0.9.53
 easyocr==1.4
 numpy>=1.21.2,<2.0
