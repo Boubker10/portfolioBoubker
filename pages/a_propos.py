@@ -1,9 +1,21 @@
 import streamlit as st
 
-def app():
+def show():
     st.title("À propos de moi")
     st.write("""
-        Je suis un passionné de Data Science et d'IA. Ce site présente mes projets personnels dans le domaine.
-        Vous trouverez des projets en Machine Learning, Deep Learning, et Time Series Forecasting.
+        Bonjour, je suis **Boubker Bennani**, passionné par la Data Science et l'Intelligence Artificielle.
+        J'ai travaillé sur plusieurs projets liés au Machine Learning, Deep Learning et à la prévision de séries temporelles.
+        Mon objectif est de résoudre des problèmes complexes à l'aide des données et d'explorer les dernières avancées dans ces domaines.
+        Voici une collection de mes travaux.
     """)
-    st.image("assets/mon_image.png", caption="Photo personnelle")
+
+    # Lire le fichier PDF
+    with open("assets/mon_cv.pdf", "rb") as file:
+        cv_pdf = file.read()
+
+    # Bouton de téléchargement
+    st.download_button(label="Télécharger mon CV", data=cv_pdf, file_name="Boubker_Bennani_CV.pdf", mime="application/pdf")
+
+
+if __name__ == "__main__":
+    show()
